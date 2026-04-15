@@ -1,0 +1,60 @@
+/* LuxeLens 品牌官网自定义样式表 */
+
+/* 核心背景与字体配置 */
+body {
+    background-color: #F9F8F3; /* 经典奶油色底色 */
+    color: #000000;
+}
+
+/* 模拟 Jo Malone 的细边框分割线风格 (1px 纯黑) */
+.lux-border-b { border-bottom: 1px solid #000000; }
+.lux-border-r { border-right: 1px solid #000000; }
+.lux-border-l { border-left: 1px solid #000000; }
+.lux-border-t { border-top: 1px solid #000000; }
+.lux-border-all { border: 1px solid #000000; }
+
+/* 响应式调整：在移动端移除部分边框 */
+@media (max-width: 768px) {
+    .md\:lux-border-r { border-right: none; }
+}
+
+/* 交互增强：高端悬停浮起效果 */
+.hover-lift {
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.4s ease;
+}
+
+.hover-lift:hover {
+    transform: translateY(-8px);
+}
+
+/* 按钮底部线条伸缩动效 */
+.link-underline-expand {
+    position: relative;
+}
+
+.link-underline-expand::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #000000;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s ease;
+}
+
+.hover\:link-underline-expand:hover::after {
+    transform: scaleX(1);
+}
+
+/* 渐显动画 */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+    animation: fadeIn 1s ease forwards;
+}

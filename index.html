@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LuxeLens | 奢华美瞳系列 - 像 Jo Malone 一样优雅</title>
+    <!-- 引入 Google Fonts: Playfair Display (衬线) 和 Montserrat (无衬线) -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- 引入 Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'lux-cream': '#F9F8F3', // 经典奶油色
+                        'lux-black': '#000000',
+                        'lux-gold': '#C5A059',
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['Montserrat', 'sans-serif'],
+                    },
+                    borderWidth: {
+                        '1': '1px',
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- 引入外部自定义样式表 -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="font-sans antialiased overflow-x-hidden text-lux-black">
+
+    <!-- 置顶公告栏 -->
+    <div class="bg-lux-black text-white text-[10px] uppercase tracking-[0.2em] py-2 text-center">
+        全场订单满 ¥500 尊享免费顺丰速递及限量版礼盒包装
+    </div>
+
+    <!-- 全局导航栏 -->
+    <header class="bg-lux-cream lux-border-b sticky top-0 z-50">
+        <!-- 品牌标识居中 -->
+        <div class="flex items-center justify-between px-6 py-4 md:px-12">
+            <div class="flex-1 hidden md:flex items-center space-x-6 text-xs uppercase tracking-widest">
+                <a href="#" class="hover:underline">所有系列</a>
+                <a href="#" class="hover:underline">新品推荐</a>
+            </div>
+            <div class="flex-shrink-0">
+                <h1 class="font-serif text-3xl md:text-4xl tracking-[0.1em] text-center font-bold">LUXELENS</h1>
+                <p class="text-[8px] tracking-[0.5em] text-center mt-1 uppercase">SHANGHAI • LONDON</p>
+            </div>
+            <div class="flex-1 flex justify-end items-center space-x-6 text-xs uppercase tracking-widest">
+                <a href="#" class="hidden md:block hover:underline">我的账户</a>
+                <a href="#" class="hover:underline flex items-center">
+                    购物袋 (0)
+                </a>
+            </div>
+        </div>
+        <!-- 极简主菜单 -->
+        <nav class="hidden md:flex justify-center space-x-12 py-3 text-[11px] uppercase tracking-[0.3em] font-medium">
+            <a href="#" class="hover:text-lux-gold transition-colors">琥珀系列</a>
+            <a href="#" class="hover:text-lux-gold transition-colors">午夜系列</a>
+            <a href="#" class="hover:text-lux-gold transition-colors">定制礼盒</a>
+            <a href="#" class="hover:text-lux-gold transition-colors">佩戴指南</a>
+            <a href="#" class="hover:text-lux-gold transition-colors">品牌故事</a>
+        </nav>
+        <!-- 移动端菜单按钮 -->
+        <div class="md:hidden flex justify-center py-2 border-t border-black/10">
+            <button class="text-[10px] uppercase tracking-widest font-bold">探索菜单</button>
+        </div>
+    </header>
+
+    <!-- 英雄海报区域 (Hero Section) -->
+    <section class="relative h-[90vh] w-full bg-[#E5E5E5] flex items-center justify-center overflow-hidden">
+        <!-- 占位背景图，模拟 Jo Malone 的高光质感 -->
+        <div class="absolute inset-0 bg-gradient-to-br from-[#F5F5F5] to-[#D8D8D8] opacity-80"></div>
+        <div class="relative z-10 text-center px-4">
+            <h2 class="font-serif text-5xl md:text-7xl mb-6 tracking-tight animate-fade-in">灵感绽放于双眸</h2>
+            <p class="font-sans text-sm md:text-lg tracking-[0.2em] mb-10 max-w-2xl mx-auto uppercase">
+                全新“琥珀之瞳”系列现已限量发售。探索为您量身定制的奢华舒适体验。
+            </p>
+            <div class="flex justify-center space-x-4">
+                <a href="#" class="lux-border-all bg-lux-black text-white px-10 py-4 text-xs uppercase tracking-[0.2em] hover:bg-transparent hover:text-lux-black transition-all">
+                    立即探索
+                </a>
+            </div>
+        </div>
+        <!-- 装饰性线条 -->
+        <div class="absolute inset-4 border border-black/5 pointer-events-none"></div>
+    </section>
+
+    <!-- 品牌价值陈述 -->
+    <section class="py-24 bg-lux-cream text-center px-6">
+        <div class="max-w-4xl mx-auto py-12 border-y border-black/10">
+            <h3 class="font-serif text-3xl mb-6 italic">“双眸是灵魂的窗口，更是风格的注脚。”</h3>
+            <p class="text-xs uppercase tracking-[0.4em] leading-loose text-gray-600">
+                LuxeLens 秉承英伦简约工艺，每一枚镜片均如珠宝般精心雕琢。<br>
+                我们将自然之美与舒适科技完美融合，为您呈现独一无二的视界。
+            </p>
+        </div>
+    </section>
+
+    <!-- 核心产品网格 -->
+    <section class="grid grid-cols-1 md:grid-cols-2">
+        <!-- 产品 1: 琥珀系列 -->
+        <div class="lux-border-t lux-border-b md:lux-border-r flex flex-col items-center justify-center text-center p-12 md:p-24 bg-white hover-lift">
+            <div class="w-full aspect-square bg-[#FDFCF9] mb-12 flex items-center justify-center">
+                <!-- 图片占位 -->
+                <div class="text-[10px] text-gray-300 tracking-[0.5em] uppercase border p-12 mb-4">
+                    [ 琥珀系列 (Amber Glow) 产品图 ]
+                </div>
+            </div>
+            <p class="text-[10px] tracking-[0.3em] font-semibold mb-4 uppercase text-gray-500">经典畅销系列</p>
+            <h4 class="font-serif text-3xl mb-4 italic">琥珀之瞳</h4>
+            <p class="text-xs tracking-[0.1em] text-gray-600 mb-8 max-w-xs">赋予双眸如仲夏午后般温暖的琥珀光泽，尽显温柔与深邃。</p>
+            <a href="#" class="text-[10px] uppercase tracking-[0.3em] border-b border-black pb-1 hover:text-lux-gold hover:border-lux-gold transition-all">
+                立即购买
+            </a>
+        </div>
+        <!-- 产品 2: 午夜系列 -->
+        <div class="lux-border-t lux-border-b flex flex-col items-center justify-center text-center p-12 md:p-24 bg-white hover-lift">
+            <div class="w-full aspect-square bg-[#FDFCF9] mb-12 flex items-center justify-center">
+                <!-- 图片占位 -->
+                <div class="text-[10px] text-gray-300 tracking-[0.5em] uppercase border p-12 mb-4">
+                    [ 午夜系列 (Midnight Spark) 产品图 ]
+                </div>
+            </div>
+            <p class="text-[10px] tracking-[0.3em] font-semibold mb-4 uppercase text-gray-500">新品系列</p>
+            <h4 class="font-serif text-3xl mb-4 italic">午夜星火</h4>
+            <p class="text-xs tracking-[0.1em] text-gray-600 mb-8 max-w-xs">深邃的灰蓝色调，点缀星辰般微光，令您的神采在夜晚愈发迷人。</p>
+            <a href="#" class="text-[10px] uppercase tracking-[0.3em] border-b border-black pb-1 hover:text-lux-gold hover:border-lux-gold transition-all">
+                立即购买
+            </a>
+        </div>
+    </section>
+
+    <!-- 定制礼品服务区域 -->
+    <section class="bg-lux-cream py-24 px-6 relative overflow-hidden">
+        <!-- 背景装饰：模拟 Jo Malone 的包装纸纹理感 -->
+        <div class="absolute inset-0 opacity-[0.03] pointer-events-none" style="background-image: radial-gradient(#000 1px, transparent 0); background-size: 40px 40px;"></div>
+        
+        <div class="max-w-screen-xl mx-auto flex flex-col md:flex-row items-stretch border border-black bg-white shadow-sm relative z-10">
+            <div class="w-full md:w-1/2 p-12 md:p-24 flex flex-col justify-center">
+                <p class="text-[10px] tracking-[0.4em] font-bold mb-6 uppercase text-gray-400">Personalisation</p>
+                <h3 class="font-serif text-4xl md:text-5xl mb-8 leading-tight">礼赠的艺术</h3>
+                <p class="text-[13px] tracking-widest leading-loose text-gray-600 mb-12">
+                    从标志性的奶油色礼盒到亲手系上的黑色罗缎丝带，<br>
+                    每一份 LuxeLens 都是一份精心准备的视界赠礼。<br>
+                    在 LuxeLens，我们不仅提供奢华的佩戴体验，更致力于让每一刻都如同艺术品般值得珍藏。
+                </p>
+                <div class="flex flex-col space-y-6">
+                    <a href="#" class="group relative w-fit text-[11px] font-bold uppercase tracking-[0.4em] py-4 pr-12">
+                        探索礼赠系列
+                        <span class="absolute right-0 top-1/2 -translate-y-1/2 group-hover:translate-x-2 transition-transform duration-300">→</span>
+                        <span class="absolute bottom-0 left-0 w-full h-[1px] bg-black transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></span>
+                    </a>
+                </div>
+            </div>
+            <div class="w-full md:w-1/2 bg-[#F3F2EE] flex items-center justify-center p-12 min-h-[400px]">
+                <div class="relative w-64 h-64 border border-black/10 flex items-center justify-center">
+                    <!-- 模拟礼盒概念图 -->
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <div class="w-48 h-48 bg-white border border-black shadow-lg relative">
+                            <!-- 黑色十字丝带效果 -->
+                            <div class="absolute top-1/2 left-0 w-full h-8 bg-black -translate-y-1/2 flex items-center justify-center">
+                                <span class="text-white text-[8px] tracking-[0.3em] font-sans">LUXELENS</span>
+                            </div>
+                            <div class="absolute top-0 left-1/2 w-8 h-full bg-black -translate-x-1/2"></div>
+                        </div>
+                    </div>
+                    <div class="text-[9px] text-gray-400 tracking-[0.5em] uppercase absolute bottom-4">Signature Packaging</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 品牌故事 / 探索更多 -->
+    <section class="py-32 bg-white text-center">
+        <div class="max-w-2xl mx-auto px-6">
+            <h4 class="font-serif text-2xl mb-8 italic">“我们相信，真正的奢华在于细节的无声流露。”</h4>
+            <div class="w-12 h-[1px] bg-black mx-auto mb-8"></div>
+            <a href="#" class="text-[10px] uppercase tracking-[0.5em] hover:text-lux-gold transition-colors">探索 LuxeLens 的世界</a>
+        </div>
+    </section>
+
+    <!-- 底部导航 (Footer) -->
+    <footer class="bg-lux-cream lux-border-t pt-24 pb-12 px-6">
+        <div class="max-w-screen-xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 mb-24">
+            <div>
+                <h5 class="text-[11px] font-bold uppercase tracking-[0.3em] mb-8">客户服务</h5>
+                <ul class="text-[10px] uppercase tracking-[0.2em] space-y-4 text-gray-600">
+                    <li><a href="#" class="hover:text-black">订单跟踪</a></li>
+                    <li><a href="#" class="hover:text-black">配送信息</a></li>
+                    <li><a href="#" class="hover:text-black">退换货政策</a></li>
+                    <li><a href="#" class="hover:text-black">常见问题</a></li>
+                </ul>
+            </div>
+            <div>
+                <h5 class="text-[11px] font-bold uppercase tracking-[0.3em] mb-8">关于品牌</h5>
+                <ul class="text-[10px] uppercase tracking-[0.2em] space-y-4 text-gray-600">
+                    <li><a href="#" class="hover:text-black">品牌故事</a></li>
+                    <li><a href="#" class="hover:text-black">可持续发展</a></li>
+                    <li><a href="#" class="hover:text-black">联系我们</a></li>
+                </ul>
+            </div>
+            <div>
+                <h5 class="text-[11px] font-bold uppercase tracking-[0.3em] mb-8">关注我们</h5>
+                <ul class="text-[10px] uppercase tracking-[0.2em] space-y-4 text-gray-600">
+                    <li><a href="#" class="hover:text-black">微信公众号</a></li>
+                    <li><a href="#" class="hover:text-black">小红书</a></li>
+                    <li><a href="#" class="hover:text-black">Instagram</a></li>
+                </ul>
+            </div>
+            <div class="md:col-span-1">
+                <h5 class="text-[11px] font-bold uppercase tracking-[0.3em] mb-8">订阅讯息</h5>
+                <p class="text-[10px] tracking-widest text-gray-500 mb-6 uppercase">订阅 LuxeLens 通讯，获取最新系列讯息与专属优惠。</p>
+                <div class="flex border-b border-black pb-2">
+                    <input type="email" placeholder="输入您的邮箱" class="bg-transparent border-none outline-none text-[10px] uppercase tracking-widest flex-grow">
+                    <button class="text-[10px] uppercase tracking-widest font-bold">提交</button>
+                </div>
+            </div>
+        </div>
+        <div class="text-center pt-12 border-t border-black/5">
+            <p class="text-[9px] tracking-[0.2em] text-gray-400 uppercase">
+                &copy; 2025 LUXELENS LONDON. 版权所有。
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
